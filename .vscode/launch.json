@@ -1,0 +1,35 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Classifier Training",
+            "type": "python",
+            "request": "launch",
+            "program": "scripts/classifier_train.py",
+            "args": [
+                "--data_dir", "cifar_train",
+                "--iterations", "30",
+                "--anneal_lr", "True",
+                "--batch_size", "16",
+                "--lr", "3e-4",
+                "--save_interval", "10000",
+                "--weight_decay", "0.05",
+                "--image_size", "64",
+                "--classifier_attention_resolutions", "32,16,8",
+                "--classifier_depth", "2",
+                "--classifier_width", "64",
+                "--classifier_pool", "attention",
+                "--classifier_resblock_updown", "True",
+                "--classifier_use_scale_shift_norm", "True"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "TRAIN_FLAGS": "--iterations 300000 --anneal_lr True --batch_size 256 --lr 3e-4 --save_interval 10000 --weight_decay 0.05",
+                "CLASSIFIER_FLAGS": "--image_size 64 --classifier_attention_resolutions 32,16,8 --classifier_depth 2 --classifier_width 64 --classifier_pool attention --classifier_resblock_updown True --classifier_use_scale_shift_norm True",
+                "PATH": "${env:HOME}/local/mpich/bin:${env:PATH}"
+            },
+            
+        }
+    ]
+}
