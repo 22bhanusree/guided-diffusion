@@ -17,6 +17,7 @@ def load_data(
     deterministic=False,
     random_crop=False,
     random_flip=True,
+    is_val=False,
 ):
     """
     For a dataset, create a generator over (images, kwargs) pairs.
@@ -43,7 +44,14 @@ def load_data(
     if class_cond:
         # Assume classes are the first part of the filename,
         # before an underscore.
-        class_names = [bf.basename(path).split("_")[0] for path in all_files]
+        if is_val:
+            # Validation set structure: class/id
+            class_names = [bf.basename(bf.dirname(path)) for path in all_files]
+        else:
+            # Training set structure: class/class_id
+            class_names = [bf.basename(path).split("_")[0] for path in all_files]
+        
+        # class_names = [bf.basename(path).split("_")[0] for path in all_files]
         sorted_classes = {x: i for i, x in enumerate(sorted(set(class_names)))}
         classes = [sorted_classes[x] for x in class_names]
     dataset = ImageDataset(

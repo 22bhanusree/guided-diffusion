@@ -30,6 +30,255 @@
                 "PATH": "${env:HOME}/local/mpich/bin:${env:PATH}"
             },
             
+        },
+
+        {
+            "name": "Debug Classifier Train Meansparse",
+            "type": "python",
+            "request": "launch",
+            "program": "scripts/classifier_train_meansparse.py",
+            "args": [
+                "--attention_resolutions", "32,16,8",
+                "--class_cond", "True",
+                "--diffusion_steps", "1000",
+                "--dropout", "0.1",
+                "--image_size", "64",
+                "--learn_sigma", "True",
+                "--noise_schedule", "cosine",
+                "--num_channels", "192",
+                "--num_head_channels", "64",
+                "--num_res_blocks", "3",
+                "--resblock_updown", "True",
+                "--use_new_attention_order", "True",
+                "--use_fp16", "True",
+                "--use_scale_shift_norm", "True",
+                "--classifier_scale", "1.0",
+                "--classifier_path", "models/64x64_classifier.pt",
+                "--classifier_depth", "4",
+                "--model_path", "models/64x64_diffusion.pt",
+                "--batch_size", "16",
+                "--data_dir" , "../../../datasets/ai/imagenet-1k/ILSVRC/Data/CLS-LOC/train",
+                "--val_data_dir","../../../work/pi_ahoumansadr_umass_edu/mteymoorianf/Research/MeanSparse/Dataset/ImageNet-1k/val",
+                "--image_size", "64"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "PATH": "${env:HOME}/local/mpich/bin:${env:PATH}"
+            }
+        },
+        {
+            "name": "Model1 Meansparse",
+            "type": "python",
+            "request": "launch",
+            "program": "scripts/train_meansparse.py",
+            "args": [
+                "--attention_resolutions", "32,16,8",
+                "--class_cond", "True",
+                "--diffusion_steps", "1000",
+                "--dropout", "0.1",
+                "--image_size", "64",
+                "--learn_sigma", "True",
+                "--noise_schedule", "cosine",
+                "--num_channels", "192",
+                "--num_head_channels", "64",
+                "--num_res_blocks", "3",
+                "--resblock_updown", "True",
+                "--use_new_attention_order", "True",
+                "--use_fp16", "True",
+                "--use_scale_shift_norm", "True",
+                "--classifier_scale", "1.0",
+                "--classifier_path", "models/64x64_classifier.pt",
+                "--classifier_depth", "4",
+                "--model_path", "models/64x64_diffusion.pt",
+                "--batch_size", "32",
+                "--data_dir" , "../../../datasets/ai/imagenet-1k/ILSVRC/Data/CLS-LOC/train",
+                "--val_data_dir","../../../work/pi_ahoumansadr_umass_edu/mteymoorianf/Research/MeanSparse/Dataset/ImageNet-1k/val",
+                "--image_size", "64"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "PATH": "${env:HOME}/local/mpich/bin:${env:PATH}"
+            }
+        },
+        {
+            "name": " Model2 Meansparse",
+            "type": "python",
+            "request": "launch",
+            "program": "scripts/train_meansparse2.py",
+            "args": [
+                "--attention_resolutions", "32,16,8",
+                "--class_cond", "True",
+                "--diffusion_steps", "1000",
+                "--dropout", "0.1",
+                "--image_size", "64",
+                "--learn_sigma", "True",
+                "--noise_schedule", "cosine",
+                "--num_channels", "192",
+                "--num_head_channels", "64",
+                "--num_res_blocks", "3",
+                "--resblock_updown", "True",
+                "--use_new_attention_order", "True",
+                "--use_fp16", "True",
+                "--use_scale_shift_norm", "True",
+                "--classifier_scale", "1.0",
+                "--classifier_path", "models/64x64_classifier.pt",
+                "--classifier_depth", "4",
+                "--model_path", "models/64x64_diffusion.pt",
+                "--batch_size", "16",
+                "--data_dir" , "../../../datasets/ai/imagenet-1k/ILSVRC/Data/CLS-LOC/train",
+                "--val_data_dir","../../../work/pi_ahoumansadr_umass_edu/mteymoorianf/Research/MeanSparse/Dataset/ImageNet-1k/val",
+                "--image_size", "64"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "PATH": "${env:HOME}/local/mpich/bin:${env:PATH}"
+            }
+        },
+        {
+            "name": " Model3 Meansparse",
+            "type": "python",
+            "request": "launch",
+            "program": "scripts/train_meansparse3.py",
+            "args": [
+                "--attention_resolutions", "32,16,8",
+                "--class_cond", "True",
+                "--diffusion_steps", "1000",
+                "--dropout", "0.1",
+                "--image_size", "64",
+                "--learn_sigma", "True",
+                "--noise_schedule", "cosine",
+                "--num_channels", "192",
+                "--num_head_channels", "64",
+                "--num_res_blocks", "3",
+                "--resblock_updown", "True",
+                "--use_new_attention_order", "True",
+                "--use_fp16", "True",
+                "--use_scale_shift_norm", "True",
+                "--classifier_scale", "1.0",
+                "--classifier_path", "models/64x64_classifier.pt",
+                "--classifier_depth", "4",
+                "--model_path", "models/64x64_diffusion.pt",
+                "--batch_size", "256",
+                "--data_dir" , "../../../datasets/ai/imagenet-1k/ILSVRC/Data/CLS-LOC/train",
+                "--val_data_dir","../../../work/pi_ahoumansadr_umass_edu/mteymoorianf/Research/MeanSparse/Dataset/ImageNet-1k/val",
+                "--image_size", "64"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "PATH": "${env:HOME}/local/mpich/bin:${env:PATH}"
+            }
+        },
+        {
+            "name": " Model4 Meansparse",
+            "type": "python",
+            "request": "launch",
+            "program": "scripts/train_meansparse4.py",
+            "args": [
+                "--attention_resolutions", "32,16,8",
+                "--class_cond", "True",
+                "--diffusion_steps", "1000",
+                "--dropout", "0.1",
+                "--image_size", "64",
+                "--learn_sigma", "True",
+                "--noise_schedule", "cosine",
+                "--num_channels", "192",
+                "--num_head_channels", "64",
+                "--num_res_blocks", "3",
+                "--resblock_updown", "True",
+                "--use_new_attention_order", "True",
+                "--use_fp16", "True",
+                "--use_scale_shift_norm", "True",
+                "--classifier_scale", "1.0",
+                "--classifier_path", "models/64x64_classifier.pt",
+                "--classifier_depth", "4",
+                "--model_path", "models/64x64_diffusion.pt",
+                "--batch_size", "16",
+                "--data_dir" , "../../../datasets/ai/imagenet-1k/ILSVRC/Data/CLS-LOC/train",
+                "--val_data_dir","../../../work/pi_ahoumansadr_umass_edu/mteymoorianf/Research/MeanSparse/Dataset/ImageNet-1k/val",
+                "--image_size", "64"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "PATH": "${env:HOME}/local/mpich/bin:${env:PATH}"
+            }
+        },
+        {
+            "name": " Model5 Meansparse",
+            "type": "python",
+            "request": "launch",
+            "program": "scripts/train_meansparse5.py",
+            "args": [
+                "--attention_resolutions", "32,16,8",
+                "--class_cond", "True",
+                "--diffusion_steps", "1000",
+                "--dropout", "0.1",
+                "--image_size", "64",
+                "--learn_sigma", "True",
+                "--noise_schedule", "cosine",
+                "--num_channels", "192",
+                "--num_head_channels", "64",
+                "--num_res_blocks", "3",
+                "--resblock_updown", "True",
+                "--use_new_attention_order", "True",
+                "--use_fp16", "True",
+                "--use_scale_shift_norm", "True",
+                "--classifier_scale", "1.0",
+                "--classifier_path", "models/64x64_classifier.pt",
+                "--classifier_depth", "4",
+                "--model_path", "models/64x64_diffusion.pt",
+                "--batch_size", "16",
+                "--data_dir" , "../../../datasets/ai/imagenet-1k/ILSVRC/Data/CLS-LOC/train",
+                "--val_data_dir","../../../work/pi_ahoumansadr_umass_edu/mteymoorianf/Research/MeanSparse/Dataset/ImageNet-1k/val",
+                "--image_size", "64"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "PATH": "${env:HOME}/local/mpich/bin:${env:PATH}"
+            }
+        },
+        {
+            "name": " Accuracy Meansparse",
+            "type": "python",
+            "request": "launch",
+            "program": "scripts/accuracy.py",
+            "args": [
+                "--attention_resolutions", "32,16,8",
+                "--class_cond", "True",
+                "--diffusion_steps", "1000",
+                "--dropout", "0.1",
+                "--image_size", "64",
+                "--learn_sigma", "True",
+                "--noise_schedule", "cosine",
+                "--num_channels", "192",
+                "--num_head_channels", "64",
+                "--num_res_blocks", "3",
+                "--resblock_updown", "True",
+                "--use_new_attention_order", "True",
+                "--use_fp16", "True",
+                "--use_scale_shift_norm", "True",
+                "--classifier_scale", "1.0",
+                "--classifier_path", "models/64x64_classifier.pt",
+                "--classifier_depth", "4",
+                "--model_path", "models/64x64_diffusion.pt",
+                "--batch_size", "16",
+                "--data_dir" , "../../../datasets/ai/imagenet-1k/ILSVRC/Data/CLS-LOC/train",
+                "--val_data_dir","../../../work/pi_ahoumansadr_umass_edu/mteymoorianf/Research/MeanSparse/Dataset/ImageNet-1k/val",
+                "--image_size", "64"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "PATH": "${env:HOME}/local/mpich/bin:${env:PATH}"
+            }
         }
+
+
+
     ]
 }
