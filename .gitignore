@@ -1,3 +1,10 @@
 .DS_Store
 __pycache__/
 classify_image_graph_def.pb
+myenv/
+cifar_test/
+cifar_train/
+plots/
+scripts/*.png
+scripts/*.pth
+evaluations/
